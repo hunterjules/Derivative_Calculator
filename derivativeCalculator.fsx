@@ -1,3 +1,8 @@
+// Simple Derivative Calculator for CPSC 3400 at Seattle University
+// Credit to Professor Beatriz Diaz Acosta for all things labeled "DO NOT MODIFY"
+// Simplify function written by me
+
+
 // Expression type (DO NOT MODIFY)
 type Expression =
     | X
@@ -23,7 +28,7 @@ let exprToString expr =
         | Mul (e1, e2) -> lParen + recExprStr true e1 + "*" + recExprStr true e2 + rParen
     recExprStr false expr
 
-// TODO: write simplify function
+// simplify function
 let rec simplify (expr:Expression) = 
   match expr with
   | X -> X 
